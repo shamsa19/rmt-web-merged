@@ -1,0 +1,92 @@
+/* registrations.css */
+.registration-container {
+    height: 100vh;
+  }
+  
+  .registration-image {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .registration-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    height: 100%;
+  }
+  
+  .registration-form-content {
+    /* max-width: 400px;
+     */width: 60%;
+     height: 100%;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .registration-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form-box {
+    padding: 16px;
+  }
+  
+  .password-fields,
+  .gender-age-fields,
+  .nationality-birthdate-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 12px;
+  }
+  
+  .login-text {
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .login-text:hover {
+    text-decoration: underline;
+  }
+  
+
+  .image {
+    width: 30rem;
+    height: auto;
+    margin-right: 5rem;
+  }

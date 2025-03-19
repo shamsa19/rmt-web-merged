@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import "../CSS/registrations.css"; // Import custom CSS for styling
 import RmtsLogo from "../assets/RMTS.jpeg";
 
 // Reusable components
@@ -100,29 +100,20 @@ const Registration: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-gray-50">
+    <div className="registration-container">
       {/* Left Column (Image) */}
-      <div className="md:w-1/2 flex items-center justify-center bg-white">
-        <img
-          src={RmtsLogo}
-          alt="RMTS Logo"
-          className="max-w-full h-auto p-4 md:p-8"
-        />
-      </div>
 
       {/* Right Column (Form) */}
-      <div className="md:w-1/2 flex flex-col justify-center px-4 py-8 sm:px-6 lg:px-8">
-        <div className="max-w-md w-full mx-auto">
-          <h2 className="text-center text-3xl font-extrabold text-gray-900 mb-6">
-            Create your account
-          </h2>
-
+      <div className="registration-form-container">
+        <div className="registration-form-content">
           {/* Error/Success Messages */}
           {error && <Alert type="error" message={error} />}
           {message && <Alert type="success" message={message} />}
 
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <form className="space-y-6" onSubmit={handleSubmit}>
+          <div className="form-box">
+            <h2 className="registration-heading">Create your account</h2>
+
+            <form className="form" onSubmit={handleSubmit}>
               {/* Full Name */}
               <TextField
                 label="Full Name"
@@ -143,7 +134,7 @@ const Registration: React.FC = () => {
               />
 
               {/* Password & Confirm Password */}
-              <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-2">
+              <div className="password-fields">
                 <TextField
                   label="Password"
                   name="password"
@@ -172,13 +163,13 @@ const Registration: React.FC = () => {
                   { label: "Select role", value: "" },
                   { label: "User", value: "user" },
                   { label: "Doctor", value: "doctor" },
-                  { label: "Secretary", value: "secertary" },
+                  { label: "Secretary", value: "secretary" },
                 ]}
                 required
               />
 
               {/* Gender & Age */}
-              <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-2">
+              <div className="gender-age-fields">
                 <SelectField
                   label="Gender"
                   name="gender"
@@ -202,7 +193,7 @@ const Registration: React.FC = () => {
               </div>
 
               {/* Nationality & Birth Date */}
-              <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-2">
+              <div className="nationality-birthdate-fields">
                 <TextField
                   label="Nationality"
                   name="nationality"
@@ -244,29 +235,22 @@ const Registration: React.FC = () => {
 
               {/* Register Button */}
               <div>
-                <button
-                  type="submit"
-                  className="w-full flex justify-center py-2 px-4 border 
-                    border-transparent rounded-md shadow-sm text-sm 
-                    font-medium text-white bg-blue-600 hover:bg-blue-700 
-                    focus:outline-none focus:ring-2 focus:ring-offset-2 
-                    focus:ring-blue-500"
-                >
+                <button type="submit" className="register-btn">
                   Register
                 </button>
               </div>
 
               {/* Already have an account? */}
-              <div className="text-sm text-center">
-                <Link
-                  to="/login"
-                  className="font-medium text-blue-600 hover:text-blue-500"
-                >
+              <div className="login-link">
+                <Link to="/login" className="login-text">
                   Already have an account? Sign in
                 </Link>
               </div>
             </form>
           </div>
+        </div>
+        <div className="registration-image">
+          <img src={RmtsLogo} alt="RMTS Logo" className="image" />
         </div>
       </div>
     </div>

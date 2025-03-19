@@ -1,0 +1,41 @@
+/* layout.css */
+
+/* Container that holds the entire layout */
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Header section styling */
+  header {
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Body section with sidebar and main content */
+  .layout-body {
+    display: flex;
+    flex: 1;  /* Ensures the body takes the remaining space */
+  }
+  
+  /* Sidebar styling */
+  aside {
+    width: 250px; /* Adjust width of sidebar */
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+  }
+  
+  /* Main content area */
+  main {
+    flex: 1; /* Main content takes up the remaining space */
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow-y: auto; /* Ensures content is scrollable if needed */
+  }
+  
+  /* Optional: You can add more styles for sidebar links or hover effects */
+  

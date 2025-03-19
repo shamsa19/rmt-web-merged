@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "../CSS/dashboard.css";
+
 const Dashboard: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -15,7 +17,7 @@ const Dashboard: React.FC = () => {
       </Link>
       <Link
         to="/patients"
-        className="inline-block px-4 py-2 bg-blue-600 text-black rounded hover:bg-blue-700"
+        className="inline-block px-4 py-2 bg-blue-600 text-black rounded hover:bg-blue-700 Link"
       >
         View Your Patients
       </Link>
@@ -29,14 +31,15 @@ const Dashboard: React.FC = () => {
           Profile
         </Link>
       </li>
-      <li>
-        <Link to="/patients" className="text-blue-600 hover:underline">
-          Patients
-        </Link>
-      </li>
+
       <li>
         <Link to="/assign-glove" className="text-blue-600 hover:underline">
           Assign Glove
+        </Link>
+      </li>
+      <li>
+        <Link to="/appointments" className="text-blue-600 hover:underline">
+          View Appointments
         </Link>
       </li>
 

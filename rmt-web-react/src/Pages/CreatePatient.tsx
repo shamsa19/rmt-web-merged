@@ -73,7 +73,7 @@ const CreatePatient: React.FC = () => {
         const data = await response.json();
         setMessage("Patient account created successfully!");
         // Optionally, display a success message before navigating
-        navigate("/dashboard");
+        //navigate("/dashboard");
       } else {
         const errorData = await response.json();
         setError(errorData.error || "Patient creation failed.");

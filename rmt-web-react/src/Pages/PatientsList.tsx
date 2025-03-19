@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface Patient {
-  uid: string;
+  id: string;
   fullName: string;
   email: string;
   phonenumber: string;
   emergencyContact: string;
-  // Add other fields as needed
 }
 
 const PatientsList: React.FC = () => {
@@ -24,9 +23,10 @@ const PatientsList: React.FC = () => {
           headers: { "Content-Type": "application/json" },
           credentials: "include", // ensures cookies are sent
         });
+
         if (response.ok) {
           const data = await response.json();
-          setPatients(data.patients);
+          setPatients(data);
         } else {
           const errorData = await response.json();
           setError(errorData.error || "Failed to load patients");
@@ -61,7 +61,7 @@ const PatientsList: React.FC = () => {
           </thead>
           <tbody>
             {patients.map((patient) => (
-              <tr key={patient.uid}>
+              <tr key={patient.id}>
                 <td className="py-2 px-4 border-b">{patient.fullName}</td>
                 <td className="py-2 px-4 border-b">{patient.email}</td>
                 <td className="py-2 px-4 border-b">{patient.phonenumber}</td>

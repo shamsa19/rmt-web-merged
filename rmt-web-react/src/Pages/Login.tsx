@@ -28,7 +28,7 @@ const Login: React.FC = () => {
         const data = await response.json();
         setMessage("Login successful.");
         console.log("Login successful:", data);
-        navigate("/dashboard");
+        navigate("/appointments");
       } else {
         const errorData = await response.json();
         setError(errorData.error || "Login failed.");
