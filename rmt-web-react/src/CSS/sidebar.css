@@ -2,8 +2,8 @@
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: #2c3e50;
-    color: white;
+    background-color: #EEF1F6;
+    color: black;
     padding: 20px;
   }
   
@@ -16,17 +16,53 @@
     padding: 0;
   }
   
+  .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #DEE3EA;
+    font-family: "Glass Antiqua", cursive;
+    font-size: 2rem;
+    
+  }
+  
+  
+  li img{
+      width: 25px;
+      height: 25px;
+      margin-right: 10px; 
+
+      
+  }
+  
+  
   .sidebar-nav li {
-    margin: 20px 0;
+    margin: 40px 0;
+    display: flex;
+      gap: 10px;
+      align-items: center;
   }
   
   .sidebar-nav a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 18px;
+  }
+  .logout{
+    border: none;
+    transform: translateY(20px);
+  }
+  .logout img{
+    transform: translateX(2px);
   }
   
   .sidebar-nav a:hover {
     color: #3498db;
   }
-  
+   .logoutButton{
+    border: none;
+  }

@@ -1,0 +1,197 @@
+/* General Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap');
+
+.page {
+    width: 100vw;
+    height : 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.containerrr {
+    height: 35rem;
+    width: 60vw;
+    display: flex;
+
+}
+.horizentalline{
+    width: 100%; 
+    height: 1px;
+    background-color: black;
+    transform: translateX(-20px);
+}
+
+
+.left {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+.left::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 99, 139, 0.5); /* 0.5 sets the opacity, adjust as needed */
+    pointer-events: none; /* allows clicks to pass through the overlay */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 100%,);
+
+}
+
+.image_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+    font-family: "Glass Antiqua", cursive;
+    font-size: 5rem;
+}
+
+
+.right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEF1F6;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow-y: hidden;
+}
+
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.subtitle {
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    color: black;
+}
+
+
+ .form-container1 {
+    background-color: transparent;
+    padding: 2rem;
+    padding-bottom: 0rem;
+    border-radius: 8px;
+    width: 400px;
+    height: 100%;
+} 
+
+
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.input-container label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+/*     margin-bottom: 1rem;
+ */    background-color: #DEE3EA;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2A638B;
+    color: white;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+}
+
+.submit-btn:hover {
+    background-color: #2b6cb0;
+}
+
+.link-container {
+    text-align: center;
+}
+
+.link {
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+.input_password {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DEE3EA;
+    height: fit-content;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+
+.input_password img{
+    width: 1.5rem;
+    height: auto;
+    position: absolute;
+    right: 10px;
+}
+/* Alert Styles */
+#error {
+    color: #e53e3e;
+}
+
+#success {
+    color: #48bb78;
+}

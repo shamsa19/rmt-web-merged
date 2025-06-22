@@ -1,0 +1,93 @@
+:root {
+    --primary: #72787E;
+    --bg-default: white;
+    --bg-surface: white;
+    --text-primary: white;
+    --text-secondary: black;
+    --border-color: #72787E;
+  }
+  /* make all table text black */
+.patients-table th,
+.patients-table td {
+  color: #000000;
+}
+
+  .patients-page {
+    background-color: var(--bg-default);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 24px;
+  }
+  
+  .patients-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--primary);
+  }
+  
+  .patients-header p {
+    margin: 4px 0 16px;
+    color: var(--text-secondary);
+  }
+  
+  .patients-toolbar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .toolbar-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .toolbar-btn:hover {
+    background-color: #8C9198;
+    color: var(--text-secondary);
+  }
+  
+  .patients-table-wrapper {
+    overflow-x: auto;
+    background-color: var(--bg-surface);
+    border-radius: 8px;
+  }
+  
+  .patients-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .patients-table th {
+    background-color: var(--primary);
+    color: var(--text-primary);
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .patients-table td {
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px;
+  }
+  
+  .patients-table  {
+    background-color: #EEF1F6;
+  }
+  
+  .patients-table tr:hover {
+    background-color: white;
+    cursor: pointer;
+    
+    
+
+  }
+  
+  .patients-loading,
+  .patients-error {
+    padding: 24px;
+    color: var(--text-secondary);
+  }
+  

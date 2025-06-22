@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import TextField from "../components/TextField";
 import Alert from "../components/Alert";
+import RmtsLogo from "../../public/RMTS.jpeg";
+
+import "../CSS/login.css";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -10,6 +13,12 @@ const Login: React.FC = () => {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
+
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setVisible((prev) => !prev);
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -39,67 +48,79 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Sign in to your account
-        </h2>
-      </div>
-
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          {/* Display Alerts */}
-          {error && <Alert type="error" message={error} />}
-          {message && <Alert type="success" message={message} />}
-
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <TextField
-              label="Email address"
-              name="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-
-            <TextField
-              label="Password"
-              name="password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-
-            <div>
-              <button
-                type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Login
-              </button>
-            </div>
-          </form>
-
-          <div className="mt-6 text-center">
-            <Link
-              to="/reset-password"
-              className="font-medium text-blue-600 hover:text-blue-500"
-            >
-              Forgot your password?
-            </Link>
+    <body>
+      <div className="page">
+        <div className="containerrr">
+          <div className="left">
+            <div className="image_title">RMTS</div>
+            <img src="../../public/login.png" />
           </div>
-          <div className="mt-6 text-center">
-            <Link
-              to="/register"
-              className="font-medium text-blue-600 hover:text-blue-500"
-            >
-              Don't have an account? Register
-            </Link>
+          <div className="right">
+            <div className="title">Login</div>
+            <div className="subtitle">Access to Dashboard</div>
+            <div className="form-container1">
+              <div className="form-content">
+                {/* Display Alerts */}
+                {error && <Alert type="error" message={error} />}
+                {message && <Alert type="success" message={message} />}
+
+                <form onSubmit={handleSubmit}>
+                  <div className="input-container">
+                    <label htmlFor="email">Email address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      placeholder="example@email.com"
+                    />
+                  </div>
+
+                  <div className="input-container">
+                    <label htmlFor="password">Password</label>
+                    <div className="input_password">
+                      <input
+                        type={visible ? "text" : "password"}
+                        name="password"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                      />
+                      <img
+                        src={visible ? "eye.png" : "eye-blocked.png"}
+                        alt={visible ? "Hide password" : "Show password"}
+                        onClick={toggleVisibility}
+                        style={{
+                          cursor: "pointer",
+                          marginLeft: "10px",
+                          width: "24px",
+                          height: "24px",
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <button type="submit" className="submit-btn">
+                      Login
+                    </button>
+                  </div>
+                </form>
+
+                <div className="link-container">
+                  <Link to="/reset-password" className="link">
+                    Forgot password?
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </body>
   );
 };
 

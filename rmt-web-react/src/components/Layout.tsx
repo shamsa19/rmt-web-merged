@@ -1,6 +1,6 @@
 // Layout.tsx
 import React from "react";
-import Sidebar from "./sidebar"; // Import Sidebar component
+import Sidebar from "./Sidebar"; // Import Sidebar component
 import Header from "./Header"; // Import Header component
 import "../CSS/layout.css"; // Import CSS for layout styling
 import { Outlet } from "react-router-dom"; // Outlet is used to render child routes
@@ -8,9 +8,6 @@ import { Outlet } from "react-router-dom"; // Outlet is used to render child rou
 const Layout: React.FC = () => {
   return (
     <div className="layout-container">
-      <header>
-        <Header />
-      </header>
       <div className="layout-body">
         <aside>
           <Sidebar />

@@ -1,0 +1,136 @@
+/* AssignCreate.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  background-color: white;
+  padding: 2rem;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.modeToggle {
+  
+  border: none;
+
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 1.5rem;
+  scale:0.9 ;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 480px;
+  background-color: #EEF1F6;
+  padding: 2rem;
+  border-radius: 8px;
+  
+}
+.formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  
+}
+.formField label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #555;
+  margin-right: 10px;
+  
+}
+.formField input,
+.formField select {
+  padding: 0.5rem;
+  font-size: 12px;
+  border: 1px solid transparent;
+  height: 35px;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+  background-color: #DEE3EA;
+
+
+}
+.formField input:focus,
+.formField select:focus {
+  outline: none;
+  border-color: #63b3ed;
+}
+.assignBtnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+.assignBtn {
+  display: flex;
+  width: 150px;
+  padding: 0.75rem;
+  font-size: 1rem;;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: #2A638B;
+  color: #fff;
+  height: 40px;
+}
+.assignBtn:hover {
+  background-color: #2b6cb0;
+}
+.createBtnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+.createBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: #2A638B;
+  color: #fff;
+}
+.createBtn:hover {
+  background-color: #2f855a;
+}
+.alertError {
+  background-color: #fed7d7;
+  color: #9b2c2c;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 480px;
+}
+.alertSuccess {
+  background-color: #c6f6d5;
+  color: #2f855a;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 480px;
+}

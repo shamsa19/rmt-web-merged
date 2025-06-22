@@ -1,0 +1,150 @@
+.create-patient-page{
+  position: relative;
+}
+.CreatePatientHeader {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #EEF1F6;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .CreatePatientHeader img {
+    padding-right: 10px;
+  }
+  .CreatePatientBody{
+    background-color: #EEF1F6;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-container {
+    background-color: transparent;
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    padding-top: 1rem;
+    display: grid;                         /* Grid container */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-template-rows: repeat(3, 1fr), 3fr;    /* Three equal rows */
+    row-gap: 2rem;                      /* Minimized gap between rows */
+    column-gap: 1rem;      
+    padding-bottom: 3rem; 
+    position: relative;      
+    box-shadow: none;         /* Column gap remains unchanged */
+  }
+  
+  
+
+
+
+
+  .inputContainer1{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .inputContainer1 input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #DEE3EA;
+    display: flex;
+    flex-direction: column;
+    height: 2rem;
+    width: 100%;
+    max-width: 17rem;
+    padding: 0 1rem; 
+    justify-content: center ;
+    
+    
+  }
+  .inputContainer1 select:focus {
+    outline: none;
+    
+   
+  }
+  .inputContainer1 select:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+  }
+  .inputContainer1 select {
+    
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: #DEE3EA;
+    cursor: pointer;
+    width: 17rem;
+  }
+  .inputLabel{
+    margin-bottom: 0.5rem;
+    font-size: small;
+  }
+
+  .CreatePatientButton{
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2A638B;
+    color: white;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+    
+  }
+  .button-container {
+    /* This pushes the button to the bottom if there's extra vertical space */
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: end; 
+  }
+
+  .button-container button {
+    width: 10rem;
+  }
+  .alert-popup {
+    
+    position: absolute;
+    top: 15rem;
+    right: 39rem ;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+    background-color: white;
+    border-radius: 20px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .grid-divider {
+    border: none;
+    border-top: 2px solid black;
+    margin: 1rem 0;
+    width: 90%;
+  }
+  #error {
+    color: #e53e3e;
+  }
+
+#success {
+    color: #48bb78;
+}
